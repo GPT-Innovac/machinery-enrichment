@@ -1,0 +1,116 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.company-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-width: 2px !important;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.score-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    margin-top: 5px;
+}
+
+.score-high {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.score-medium {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+}
+
+.score-low {
+    background: linear-gradient(135deg, #6c757d, #495057);
+}
+
+.sales-pitch {
+    font-style: italic;
+    color: #495057;
+    font-size: 0.9em;
+    line-height: 1.4;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 3px solid #007bff;
+}
+
+.progress-container {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+}
+
+.progress {
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    border-bottom: 2px solid #e9ecef;
+}
+
+.badge {
+    font-size: 0.75em;
+    padding: 0.35em 0.65em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0 15px;
+    }
+    
+    .score-circle {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+/* Animation for loading */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.company-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Stagger animation for cards */
+.company-card:nth-child(1) { animation-delay: 0.1s; }
+.company-card:nth-child(2) { animation-delay: 0.2s; }
+.company-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Hide elements when search filtering is applied */
+.d-none-by-search { display: none !important; }
